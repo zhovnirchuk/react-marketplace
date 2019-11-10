@@ -1,18 +1,20 @@
 import React from 'react';
 import T from 'prop-types';
-import s from './NotFound.module.scss';
+import s from './Terms.module.scss';
 import SceneLayout from '../../components/SceneLayout/SceneLayout';
 
-function NotFound() {
+function Terms() {
   return (
     <SceneLayout>
-      <div>NotFound</div>
+      <div>
+        terms
+      </div>
     </SceneLayout>
   );
 }
 
-NotFound.propTypes = {
+Terms.propTypes = {
 
 };
 
-export default NotFound;
+export default Terms;

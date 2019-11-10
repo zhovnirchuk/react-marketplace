@@ -1,12 +1,15 @@
 import React from 'react';
 import T from 'prop-types';
 import s from './Home.module.scss';
+import SceneLayout from '../../components/SceneLayout/SceneLayout';
 
 function Home() {
   return (
-    <div>
-      home
-    </div>
+    <SceneLayout>
+      <div>
+        home
+      </div>
+    </SceneLayout>
   );
 }
 

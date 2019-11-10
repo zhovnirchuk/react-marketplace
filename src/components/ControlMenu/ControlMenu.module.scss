@@ -1,0 +1,73 @@
+$white: #fff;
+$black: #000;
+$light-gray: #E4E4E4;
+$gray: #979797;
+$main-teal: #349A89;
+
+.menu-container {
+  min-width: 210px;
+  position: absolute;
+  top: 50px;
+  right: 35px;
+
+  background: $white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.info-block {
+  display: flex;
+
+  .avatar {
+    padding: 9px 16px;
+  }
+
+  .span-holder {
+    padding: 10px 16px 10px 0;
+
+    span {
+      display: block;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .name {
+      color: $black;
+    }
+
+    .email {
+      color: $gray;
+    }
+
+    .profile {
+      color: $main-teal;
+      padding-top: 6px;
+    }
+  }
+}
+
+
+.buttons-block {
+  div {
+    width: 100%;
+    height: 42px;
+    border-top: 1px solid $light-gray;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $main-teal;
+    padding: 11px 16px;
+    box-sizing: border-box;
+  }
+
+  >:first-child {
+    border-top: 1px solid transparent;
+  }
+
+  div:hover {
+    background-color: $light-gray;
+  }
+}

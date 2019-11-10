@@ -1,18 +1,20 @@
 import React from 'react';
 import T from 'prop-types';
-import s from './NotFound.module.scss';
+import s from './Privacy.module.scss';
 import SceneLayout from '../../components/SceneLayout/SceneLayout';
 
-function NotFound() {
+function Privacy() {
   return (
     <SceneLayout>
-      <div>NotFound</div>
+      <div>
+        privacy
+      </div>
     </SceneLayout>
   );
 }
 
-NotFound.propTypes = {
+Privacy.propTypes = {
 
 };
 
-export default NotFound;
+export default Privacy;

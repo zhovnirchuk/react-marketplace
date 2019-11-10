@@ -1,0 +1,24 @@
+$footer-bg: rgba(192, 196, 206, 0.127321);
+$light-gray: #c0c4ce;
+$gray: #999;
+
+.footer {
+  background-color: $footer-bg;
+  border-top: 1px solid $light-gray;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+
+  span {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $gray;
+    font-family: Helvetica;
+  }
+
+  .link:hover {
+    filter: brightness(0.6);
+  }
+}
