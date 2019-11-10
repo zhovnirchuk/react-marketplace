@@ -10,3 +10,9 @@ export const routes = {
   profile: {path: '/profile', isLight: false},
   search: {path: '/search', isLight: false},
 };
+
+export const urls = {
+  login: '/api/auth/login',
+  register: '/api/auth/register',
+  getViewer: '/api/account/user',
+};
