@@ -28,9 +28,14 @@ export const Auth = {
     return axios.post(urls.login, body);
   },
 
+  register(body) {
+    return axios.post(urls.register, body);
+  },
+
   logout() {
     this._token = null;
     this._removeToken();
+    this._setTokenToAxios(null);
   },
 
   _storeToken() {

@@ -4,8 +4,8 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import s from './Auth.module.scss';
 
 import { routes } from '../../constants/constants';
-import Login from '../Login/Login';
-import Register from '../Register/Register';
+import Login from '../Login/LoginContainer';
+import Register from '../Register/RegisterContainer';
 import Api from '../../api';
 
 function Auth() {

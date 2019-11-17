@@ -3,6 +3,7 @@ export const routes = {
   auth: {path: '/auth', isLight: true},
   login: {path: '/auth/login', isLight: true},
   register: {path: '/auth/register', isLight: true},
+  restorePassword: {path: '/auth/restorePassword', isLight: true},
   inbox: {path: '/inbox', isLight: false},
   terms: {path: '/terms', isLight: true},
   privacy: {path: '/privacy', isLight: true},

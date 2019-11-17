@@ -1,20 +1,19 @@
 import React from 'react';
 import T from 'prop-types';
-import { Link } from 'react-router-dom';
 import s from './Register.module.scss';
-import { routes } from '../../constants/constants';
 import SceneLayout from '../../components/SceneLayout/SceneLayout';
+import AuthForm from '../../components/Form/AuthForm/AuthForm';
 
-function Register() {
+function RegisterView(props) {
   return (
     <SceneLayout>
-      <Link to={routes.login.path}>Login</Link>
+      <AuthForm title={'Register'} {...props} />
     </SceneLayout>
   );
 }
 
-Register.propTypes = {
+RegisterView.propTypes = {
 
 };
 
-export default Register;
+export default RegisterView;

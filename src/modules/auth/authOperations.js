@@ -1,21 +1,38 @@
+import * as actions from './authActions';
 import Api from '../../api';
 
-export async function login(body) {
-  const res = await Api.Auth.login(body);
+export function login(body) {
+  return async function loginThunk(dispatch) {
+    try {
+      dispatch(actions.login.start());
 
-  const { user, token } = res.data;
+      const res = await Api.Auth.login(body);
+      const { user, token } = res.data;
 
-  Api.Auth.setToken(token);
+      Api.Auth.setToken(token);
+      
+      dispatch(actions.login.success(user));
+    } catch ({ message }) {
+      console.log(message);
+      dispatch(actions.login.error({ message }));
+    }
+  };
 }
 
-export async function register(body) {
-  const res = await Api.Auth.register(body);
+export function register(body) {
+  return async function registerThunk(dispatch) {
+    try {
+      dispatch(actions.register.start());
 
-  const { user, token } = res.data;
+      const res = await Api.Auth.register(body);
+      const { user, token } = res.data;
 
-  Api.Auth.setToken(token);
-}
-
-export function logout() {
-
+      Api.Auth.setToken(token);
+      
+      dispatch(actions.register.success(user));
+    } catch ({ message }) {
+      console.log(message);
+      dispatch(actions.register.error({ message }));
+    }
+  };
 }
